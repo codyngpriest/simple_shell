@@ -35,7 +35,7 @@ position++;
 if (position >= bufsize)
 {
 bufsize += BUFFER_INCREMENT;
-tokens = realloc(tokens, bufsize * sizeof(char *));
+tokens = malloc(bufsize *sizeof(char *));
 if (!tokens)
 {
 fprintf(stderr, "Allocation error\n");
